@@ -96,7 +96,7 @@ def train_net(cnn, patchCreator, LR_start , num_patches_per_batch = 1,
         labels_proto = np.zeros((num_patches_per_batch,)+labels_proto.shape[1:], labels_proto.dtype)
 
 
-    print "data_augmentation =",b_use_data_augmentation
+    print("data_augmentation ="+b_use_data_augmentation)
     print
 
 
@@ -107,7 +107,7 @@ def train_net(cnn, patchCreator, LR_start , num_patches_per_batch = 1,
     training_mode = 1
 
 
-    print "Trigger KeyboardInterrupt (Ctrl+C) to end training prematurely"
+    print("Trigger KeyboardInterrupt (Ctrl+C) to end training prematurely")
     while done_looping==False:
         try:
             while done_looping==False:
@@ -156,7 +156,7 @@ def train_net(cnn, patchCreator, LR_start , num_patches_per_batch = 1,
                 NLL_history.append(nll)
 #                trailing_mean_NLL = 0.995* trailing_mean_NLL + 0.005* xnll
 
-                nit+=1;
+                nit+=1
 
                 if nit%10 == 0:
                     NLL_history = NLL_history[-NLL_history_size:]
@@ -172,7 +172,7 @@ def train_net(cnn, patchCreator, LR_start , num_patches_per_batch = 1,
 
 
         except KeyboardInterrupt:
-            print "Training terminated via ctrl+C"
+            print("Training terminated via ctrl+C")
             break
 
 #    cnn.SaveParameters("end_"+str(save_name)+".save")
@@ -217,7 +217,7 @@ def Build3D(nnet_args, n_labels_per_batch = 300,  patch_depth = 1, actfunc='relu
                                        auto_threshold_labels=auto_threshold_labels,
                                        pad_last_dimension = not notrain)
 
-    print 'Building CNN...'
+    print('Building CNN...')
     cnn = MixedConvNN( patchCreator.CNET_Input_Size, ImageDepth = input_to_cnn_depth, InputImageDimensions = 3,
                       bDropoutEnabled_ = bDropoutEnabled, bSupportVariableBatchsize=0, 
                       batchsize=num_patches_per_batch, verbose = 0, bWeightDecay = bWeightDecay)
@@ -236,7 +236,7 @@ def Build3D(nnet_args, n_labels_per_batch = 300,  patch_depth = 1, actfunc='relu
     if gradient_clipping:
         cnn.enable_gradient_clipping(0.02)
 
-    print "Compiling Output Functions"
+    print("Compiling Output Functions")
     cnn.CompileOutputFunctions(b_isRegression = False,
                                b_ignore_pred_funct= not notrain, bUseModulatedNLL=0,
                                b_regression_with_margin=0, margin_reweighted_error=0,
@@ -244,13 +244,13 @@ def Build3D(nnet_args, n_labels_per_batch = 300,  patch_depth = 1, actfunc='relu
 
     
     cnn.CompileDebugFunctions(gradients=0)
-    print "done: Build3D()"
+    print("done: Build3D()")
     return cnn, patchCreator
 
 
 
 
 if __name__ == '__main__':
-    print "please execute main_train.py instead!"
+    print("please execute main_train.py instead!")
 
 

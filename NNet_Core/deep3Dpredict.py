@@ -31,7 +31,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 import argparse
 import time
 import numpy as np
-import utils.data_and_CV_handler as data_and_CV_handler
+from NNet_Core import data_and_CV_handler
 
 
 def predict(list_training_data, list_training_labels, list_test_data, 
@@ -68,7 +68,7 @@ def predict(list_training_data, list_training_labels, list_test_data,
     assert len(list_training_data) == len(list_training_labels)
     
     save_name = filter_saves(save_name)
-    print 'using model-parameters:',save_name
+    print('using model-parameters:' + save_name) 
     patch_depth = 1
     use_fragment_pooling = 0
 
@@ -125,7 +125,7 @@ def predict(list_training_data, list_training_labels, list_test_data,
                                        save_as = output_path, output_filetype = output_filetype,
                                        save_prob_map = save_prob_map)
     t1 = time.clock()
-    print "Predicted all in",t1-t0,"seconds"
+    print("Predicted all in",t1-t0,"seconds")
 
 
 
