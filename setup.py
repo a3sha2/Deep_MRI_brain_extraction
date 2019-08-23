@@ -14,7 +14,7 @@ setup(name='NNet_Core',
       'h5py'
       ],
       packages=['NNet_Core'],
-      scripts=['NNet_core/deep3Dpredict.py','NNet_core/deep3Dtrain.py'],
+      scripts=['NNet_Core/deep3Dpredict.py','NNet_Core/deep3Dtrain.py'],
       classifiers=[
           'Intended Audience :: Science/Research',
           'Programming Language :: Python',
