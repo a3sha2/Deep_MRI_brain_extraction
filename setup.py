@@ -13,8 +13,8 @@ setup(name='NNet_Core',
       'nibabel',
       'h5py'
       ],
-      scripts=['NNet_core/deep3Dpredict.py','NNet_core/deep3Dtrain.py'],
       packages=['NNet_Core'],
+      scripts=['NNet_core/deep3Dpredict.py','NNet_core/deep3Dtrain.py'],
       classifiers=[
           'Intended Audience :: Science/Research',
           'Programming Language :: Python',
