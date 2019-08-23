@@ -1,4 +1,0 @@
-numpy
-theano
-nibabel
-h5py
