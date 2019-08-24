@@ -27,7 +27,7 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABI
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 """
-from .file_reading import file_reading
+from .file_reading import *
 from .helper_seg import helper_seg
 from .maxPool3D import maxPool3D
 from .NN_Analyzer import NN_Analyzer
