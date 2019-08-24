@@ -63,7 +63,7 @@ def train(list_training_data, list_training_labels, list_test_data,
 
 
     """
-    import utils.Segmentation_trainer as Segmentation_trainer
+    import Segmentation_trainer as Segmentation_trainer
     
     assert len(list_training_data) == len(list_training_labels), "The total number of data files and label files differs: "+str(len(list_training_data))+' vs '+str(len(list_training_labels))
     autosave_frequency_minutes=60 # saves a copy of the CNN's parameters on the disk every X minutes

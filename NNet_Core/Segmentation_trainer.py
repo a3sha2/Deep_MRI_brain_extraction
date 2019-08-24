@@ -33,8 +33,8 @@ import numpy as np
 import time
 
 
-from   NNet_Core.NN_ConvNet import MixedConvNN
-import NNet_Core.utilities as utilities
+from   NN_ConvNet import MixedConvNN
+import utilities as utilities
 import helper_seg as helper
 
 

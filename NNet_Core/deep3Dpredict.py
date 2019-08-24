@@ -63,8 +63,8 @@ def predict(list_training_data, list_training_labels, list_test_data,
 
 
     """
-    import utils.Segmentation_trainer as Segmentation_trainer
-    import utils.Segmentation_predictor as Segmentation_predictor
+    import Segmentation_trainer as Segmentation_trainer
+    import Segmentation_predictor as Segmentation_predictor
     assert len(list_training_data) == len(list_training_labels)
     
     save_name = filter_saves(save_name)
