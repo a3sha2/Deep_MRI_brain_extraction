@@ -27,4 +27,24 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABI
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 """
+from .file_reading import file_reading
+from .helper_seg import helper_seg
+from .maxPool3D import maxPool3D
+from .NN_Analyzer import NN_Analyzer
+from .NN_ConvLayer_2D import NN_ConvLayer_2D
+from .NN_ConvLayer_3D import NN_ConvLayer_3D
+from .NN_ConvNet import NN_ConvNet
+from .NN_Optimizers import NN_Optimizers
+from .NN_PerceptronLayer import NN_PerceptronLayer
+from .NN_regularizers import NN_regularizers
+from .save_scores_in_r_format import save_scores_in_r_format
+from .Segmentation_predictor  import Segmentation_predictor
+from .Segmentation_trainer  import Segmentation_trainer
+from .TransferFunctions import TransferFunctions
+from .utilities import  utilities
+
+
+
+
+
 

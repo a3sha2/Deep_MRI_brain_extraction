@@ -41,7 +41,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 import time
 import numpy as np
 import utilities as utilities
-import file_reading
+import file_reading as file_reading
 import helper_seg as helper
 import scipy.ndimage as ndimage
 
